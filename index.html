@@ -116,23 +116,25 @@
             width: 50%;
             padding: 40px 20px;
             background-color: black;
-            box-shadow: #27ca3f;
         }
 
         .center-card {
-
             border-radius: 12px;
-
             padding: 40px;
         }
 
-        /* Right Side - Navigation Links */
+        /* Right Side - Navigation Links - FIXED */
         .right-side {
             width: 25%;
-            padding-top: 100px;
-            position: sticky;
+            position: fixed;
+            right: 0;
             top: 90px;
-            height: fit-content;
+            height: calc(100vh - 90px);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 20px;
+            z-index: 10;
         }
 
         .side-nav {
@@ -141,6 +143,11 @@
             align-items: flex-end;
             gap: 20px;
             padding-right: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
         }
 
         .side-nav a {
@@ -590,6 +597,7 @@
             .center-content,
             .right-side {
                 width: 100%;
+                position: static;
             }
 
             .left-side {
@@ -597,8 +605,15 @@
             }
 
             .right-side {
-                position: static;
-                padding: 20px;
+                position: fixed;
+                bottom: 0;
+                top: auto;
+                height: auto;
+                background: rgba(0, 0, 0, 0.9);
+                width: 100%;
+                justify-content: center;
+                padding: 10px;
+                border-top: 1px solid var(--border-color);
             }
 
             .side-nav {
@@ -606,6 +621,10 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 padding-right: 0;
+                gap: 15px;
+                background: transparent;
+                border: none;
+                backdrop-filter: none;
             }
 
             .center-card {
@@ -977,14 +996,14 @@
                                     <a href="#" class="btn btn-primary">Live Demo</a>
                                     <a href="#" class="btn btn-secondary">GitHub Repo</a>
                                 </div>
-                            </div> -->
-                        </div>
+                            </div>
+                        </div> -->
                     </div>
                 </section>
             </div>
         </div>
 
-        <!-- Right Side - Links -->
+        <!-- Right Side - Links - NOW FIXED TO RIGHT SIDE -->
         <div class="right-side">
             <nav class="side-nav">
                 <a href="#hero" class="active">Home</a>
@@ -1028,7 +1047,7 @@
                             <i class="fab fa-instagram social-icon"></i>
                             <span>Instagram</span>
                         </a>
-                        <a href="mailto:alex@example.com" class="social-link">
+                        <a href="mailto:rudrapratap8692149@gmail.com" class="social-link">
                             <i class="fas fa-envelope social-icon"></i>
                             <span>rudrapratap8692149@gmail.com</span>
                         </a>
@@ -1136,4 +1155,3 @@
 
 </html>
 
-</html>
